@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Movie</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-blue-400 p-4">
+      <nav>
+        <ul>
+          <a href="" class="font-bold text-xl text-white">Search Movie</a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="p-4 flex gap-3 justify-items-center items-center rounded-md"
+      >
+        <input
+          type="text"
+          id="search-input"
+          class="w-full p-2 border border-gray-300"
+          placeholder="Movie Title"
+        />
+        <button
+          type="submit"
+          id="search-button"
+          class="bg-blue-400 text-white p-2 rounded-md"
+        >
+          Search
+        </button>
+      </section>
+      <hr />
+      <div
+        id="movie-list"
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4"
+      >
+        <!-- <div class="bg-sky-200 p-4 rounded-md">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Movie Poster"
+            class="w-full rounded-md"
+          />
+          <h3 class="text-xl font-bold">Movie Title</h3>
+          <p class="text-gray-600">Movie Description</p>
+        </div> -->
+      </div>
+    </main>
+    <!-- Modal -->
+    <!-- Modal -->
+    <div
+      id="exampleModal"
+      class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden justify-center items-center z-50"
+    >
+      <div class="flex justify-center items-center h-full">
+        <!-- Apply custom class here -->
+        <div class="bg-white p-6 rounded-md modal-custom h-fit">
+          <h2 class="text-xl font-bold mb-4">Movie Details</h2>
+          <div class="modal-body text-gray-600">
+            <!-- Movie details will be injected here -->
+          </div>
+          <div class="flex justify-end">
+            <button
+              id="close-modal"
+              class="bg-red-500 text-white p-2 rounded-md mt-4"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
